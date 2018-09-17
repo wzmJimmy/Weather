@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head_title %}Manage Reminders{% endblock %}
+
+{% block base_content %}
+    <div class="panel panel-default col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+        <p class="panel-heading">Which time do you want a reminder?</p>
+        <td class="panel-body">
+            <table class="table">
+                <tbody>
+                <tr>
+                <form METHOD="post">
+                    {% csrf_token %}
+                    <td class="col-sm-11">{{ form.remindertime }}</td>
+                    <td class="col-sm-1">
+                        <button class="btn btn-link" style="padding-left: 0px;">
+                            <span class="glyphicon glyphicon-ok text-primary"></span>
+                        </button>
+                    </td>
+                </form>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
